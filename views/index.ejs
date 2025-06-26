@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Letters</title>
+  </head>
+
+  <body>
+    <!-- Write your code here -->
+    <% if (locals.count) { %>
+
+    <h1>🌟🌟🌟There are <%= count %> letters in your name.🌟🌟🌟</h1>
+    <% if ( locals.count <5){ %>
+    <h2>
+      💩your name sack💩 it is below 5 words. change your name <%= name %>
+    </h2>
+    <% }else if (locals.count === 10){ %>
+    <h1>
+      💕💕💕your name is awesome💕💕💕. it is exactly 10 letters. welcome to the
+      real world 🤑 <%= name %>
+    </h1>
+    <% } else if (locals.count > 5){ %>
+    <h2>You have human name 👨‍👩‍👧‍👦. welcome to earth 🌎 <%= name %></h2>
+
+    <% } %> <% }else{ %>
+
+    <h1>😎Enter your name below if you want to see some majic 😎 👇</h1>
+
+    <% } %>
+
+    <form action="/submit" method="POST">
+      <input type="text" name="fName" placeholder="First name" />
+      <input type="text" name="lName" placeholder="Last name" />
+      <input type="submit" value="OK" />
+    </form>
+  </body>
+</html>
